@@ -320,7 +320,6 @@ public class activity_quiz extends AppCompatActivity {
             if (selectedIndex == questions.get(currentQuestionIndex).getCorrectAnswerIndex()) {
                 score++;
             }
-
         }
     }
 }
