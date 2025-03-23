@@ -24,6 +24,7 @@ public class splash_screen extends AppCompatActivity {
             return insets;
         });
 
+
         TextView registerBtn = findViewById(R.id.register_button);
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
