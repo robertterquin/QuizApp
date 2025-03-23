@@ -311,7 +311,6 @@ public class activity_quiz extends AppCompatActivity {
             optionsGroup.clearCheck();
         }
     }
-
     private void checkAnswer() {
         int selectedId = optionsGroup.getCheckedRadioButtonId();
         if (selectedId != -1) {
