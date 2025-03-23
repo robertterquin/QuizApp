@@ -24,7 +24,6 @@ public class activity_quiz extends AppCompatActivity {
     int score = 0;
     String category;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
