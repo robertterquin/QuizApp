@@ -46,7 +46,6 @@ public class activity_quiz extends AppCompatActivity {
         // Load questions based on category
         questions = getQuestionsByCategory(category);
 
-
         displayQuestion();
 
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -73,8 +72,6 @@ public class activity_quiz extends AppCompatActivity {
             }
         });
 
-
-
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +86,6 @@ public class activity_quiz extends AppCompatActivity {
     private boolean isAnswerSelected() {
         return optionsGroup.getCheckedRadioButtonId() != -1; // Checks if any radio button is selected
     }
-
 
     private ArrayList<Questions> getQuestionsByCategory(String category) {
         ArrayList<Questions> questionList = new ArrayList<>();
