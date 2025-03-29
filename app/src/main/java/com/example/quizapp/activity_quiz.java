@@ -18,7 +18,6 @@ public class activity_quiz extends AppCompatActivity {
     RadioGroup optionsGroup;
     RadioButton option1, option2, option3, option4;
     Button nextButton, backButton;
-
     ArrayList<Questions> questions;
     int currentQuestionIndex = 0;
     int score = 0;
@@ -43,7 +42,6 @@ public class activity_quiz extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
         backButton = findViewById(R.id.backButton);
 
-        // Load questions based on category
         questions = getQuestionsByCategory(category);
 
         displayQuestion();
