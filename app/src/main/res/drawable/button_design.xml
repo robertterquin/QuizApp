@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Pressed State (Darker Shade) -->
+
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"
                 android:startColor="#A0A0A0"
-                android:endColor="#909090"/> <!-- Slightly darker for pressed effect -->
+                android:endColor="#909090"/>
             <corners android:radius="25dp"/>
-            <stroke android:width="2dp" android:color="#B0B0B0"/> <!-- Lighter border -->
+            <stroke android:width="2dp" android:color="#B0B0B0"/>
             <padding android:left="10dp" android:right="10dp"/>
         </shape>
     </item>
 
-    <!-- Default State -->
+
     <item>
         <shape android:shape="rectangle">
             <gradient
@@ -22,7 +22,7 @@
                 android:startColor="#B0B0B0"
                 android:endColor="#A0A0A0"/>
             <corners android:radius="25dp"/>
-            <stroke android:width="2dp" android:color="#C0C0C0"/> <!-- Light border -->
+            <stroke android:width="2dp" android:color="#C0C0C0"/>
             <padding android:left="10dp" android:right="10dp"/>
         </shape>
     </item>

@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Background Circle (Gray) -->
     <item>
         <shape android:shape="oval">
-            <solid android:color="@android:color/transparent"/> <!-- Transparent center -->
-            <stroke android:width="15dp" android:color="#E0E0E0"/> <!-- Gray background ring -->
+            <solid android:color="@android:color/transparent"/>
+            <stroke android:width="15dp" android:color="#E0E0E0"/>
         </shape>
     </item>
 
-    <!-- Progress Foreground (Green Ring) -->
     <item android:id="@android:id/progress">
         <scale android:scaleWidth="100%" android:scaleGravity="center" android:useLevel="true">
             <shape android:shape="oval">
-                <solid android:color="@android:color/transparent"/> <!-- Transparent center -->
-                <stroke android:width="15dp" android:color="#388E3C"/> <!-- Green progress ring -->
+                <solid android:color="@android:color/transparent"/>
+                <stroke android:width="15dp" android:color="#388E3C"/>
             </shape>
         </scale>
     </item>

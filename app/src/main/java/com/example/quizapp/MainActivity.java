@@ -31,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize UI elements
+
         imageView = findViewById(R.id.search_logo);
         gridView = findViewById(R.id.gridView);
         itemList = new ArrayList<>();
 
-        // Add quiz categories
+
         itemList.add(new Item(R.drawable.parchment, "History", "Learn about past events."));
         itemList.add(new Item(R.drawable.science, "Science", "Explore the wonders of science."));
         itemList.add(new Item(R.drawable.sports, "Sports", "Test your sports knowledge."));
@@ -50,11 +50,10 @@ public class MainActivity extends AppCompatActivity {
         itemList.add(new Item(R.drawable.food, "Food", "Test your knowledge of cuisines."));
         itemList.add(new Item(R.drawable.movies, "Movies", "Guess films, directors, and actors."));
 
-        // Set adapter for GridView
         CustomAdapter myAdapter = new CustomAdapter(MainActivity.this, itemList);
         gridView.setAdapter(myAdapter);
 
-        // Handle category clicks (navigate to QuizActivity)
+
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -76,15 +75,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isHeartFilled) {
-                    heartImageView.setImageResource(R.drawable.hollow_heart); // Hollow heart
+                    heartImageView.setImageResource(R.drawable.hollow_heart);
                 } else {
-                    heartImageView.setImageResource(R.drawable.heart); // Red heart
+                    heartImageView.setImageResource(R.drawable.heart);
                 }
                 isHeartFilled = !isHeartFilled;
             }
         });
 
-        // Set click listener for search imageView
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,25 +93,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // Method to show search popup
     private void showSearchPopup() {
-        // Inflate custom layout
+
         LayoutInflater inflater = LayoutInflater.from(this);
         View dialogView = inflater.inflate(R.layout.custom_dialog, null);
 
-        // Get references to UI elements
         EditText input = dialogView.findViewById(R.id.edit_text_category);
         Button btnSearch = dialogView.findViewById(R.id.btn_search);
         Button btnCancel = dialogView.findViewById(R.id.btn_cancel);
 
-        // Create Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(dialogView);
 
         AlertDialog dialog = builder.create();
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
-        // Cancel button click
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    // Method to search for the category and navigate if found
     private void searchCategory(String category) {
         boolean found = false;
 
@@ -149,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Navigate to QuizActivity
     private void openQuizActivity(String category) {
         Intent intent = new Intent(MainActivity.this, activity_quiz.class);
         intent.putExtra("category", category);

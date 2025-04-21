@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/categorypg">
 
-    <!-- Top Bar with Back and Heart Buttons -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +40,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Category Selection Section -->
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
@@ -69,7 +68,6 @@
             android:src="@drawable/loupe" />
     </LinearLayout>
 
-    <!-- GridView Section -->
     <GridView
         android:id="@+id/gridView"
         android:padding="25dp"

@@ -51,16 +51,16 @@ public class activity_quiz extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isAnswerSelected()) {
                     Toast.makeText(activity_quiz.this, "Please select an answer", Toast.LENGTH_SHORT).show();
-                    return; // Stop execution if no answer is selected
+                    return;
                 }
 
-                checkAnswer(); // Check the selected answer
+                checkAnswer();
 
                 if (currentQuestionIndex < questions.size() - 1) {
                     currentQuestionIndex++;
                     displayQuestion();
                 } else {
-                    // ✅ Redirect to results page after last question
+
                     Intent intent = new Intent(activity_quiz.this, activity_result.class);
                     intent.putExtra("score", score);
                     intent.putExtra("total", questions.size());
